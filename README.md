@@ -34,7 +34,7 @@
 ### 1. **환경 설정**
 ```bash
 # 프로젝트 클론
-git clone <repository_url>
+git clone https://github.com/Seonguk1/OSSProject.git
 
 # 의존성 설치
 pip install -r requirements.txt

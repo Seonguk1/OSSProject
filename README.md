@@ -28,52 +28,58 @@
 - 최종 애정도 점수를 기반으로 결과를 재밌게 시각화합니다.
 
 ---
+## 📂 카카오톡 대화 로그 파일 불러오기
 
-## 💻 설치 및 실행
+애플리케이션은 **카카오톡 대화 파일**을 텍스트 형식으로 분석합니다. 다음 단계를 따라 대화 로그 파일을 추출하세요.
 
-### 1. **환경 설정**
-```bash
-# 프로젝트 클론
-git clone <repository_url>
+### 1. 카카오톡 대화 파일 내보내기
+1. 카카오톡 앱에서 원하는 채팅방을 엽니다.
+2. 우측 상단의 **옵션(≡)** 버튼을 클릭합니다.
+3. **채팅방 설정** > **내보내기**를 선택합니다.
+4. **텍스트만 내보내기**를 선택합니다.
+5. 대화 파일이 생성됩니다.
 
-# 의존성 설치
-pip install -r requirements.txt
-```
-### 2. **애플리케이션 실행**
-bash
-코드 복사
-python app.py
-웹 브라우저에서 http://127.0.0.1:5000을 열어 애플리케이션을 실행하세요.
+---
 
 ## 📂 파일 구조
 ```plaintext
 📁 프로젝트 루트
 ├── app.py             # Flask 애플리케이션 메인 파일
-├── templates/
+├── templates/         
 │   ├── index.html     # 메인 업로드 페이지
 │   ├── result.html    # 결과 페이지
 │   ├── final_score.html # 최종 점수 페이지
-├── static/
+├── static/            
 │   ├── css/
 │   │   ├── style.css  # 공통 스타일 시트
 │   ├── js/
 │       ├── script.js  # 클라이언트 측 스크립트
-├── requirements.txt   # 프로젝트 의존성 목록
-└── README.md          # 프로젝트 소개 문서
+├── assets/            
+│   ├── main-page.png  
+│   ├── result1.png    
+│   ├── result2.png    
+│   ├── result3.png    
+│   ├── final-score.png    
+└── README.md          
 ```
-## 🎨 결과 화면
+## 🎨 실행 화면
 ### **1. 메인 페이지**
 - 카카오톡 대화 파일 업로드와 시작하기 버튼 제공.
-![메인 페이지](assets/main-page.png)
+  
+![메인 페이지](assets/main_page.png)
 
 ### **2. 분석 결과**
 - 일별 대화량, 시간대별 대화량, 대화 비율, 점수 그래프 등을 시각적으로 확인 가능.
+  
 ![메인 페이지](assets/result1.png)
+
 ![메인 페이지](assets/result2.png)
+
 ![메인 페이지](assets/result3.png)
 
 ### **3. 최종 점수**
 - 정규분포 그래프와 함께 두 사람의 최종 점수를 제공.
+
 ![메인 페이지](assets/final.png)
 ---
 

@@ -1,0 +1,4 @@
+Flask==2.3.2
+pandas==1.5.3
+emoji==2.2.0
+chart.js==4.0.1     # Chart.js를 Python에서 사용할 경우 (선택 사항)

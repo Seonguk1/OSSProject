@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애정도 테스트</title>
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <script>
+    function validateForm() {
+        const fileInput = document.getElementById("file");
+        if (!fileInput.value) {
+            alert("파일을 업로드해주세요.");
+            return false; // 폼 전송 방지
+        }
+        return true; // 폼 전송 허용
+    }
+</script>
+</head>
+<body>
+  <div class="container">
+    <h1>애정도 테스트</h1>
+    <h2>채팅으로 알아보는 우리의 애정도 점수는?</h2>
+
+    <form action="/" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
+      <p id="file-name" style="margin-top: 10px; color: #555; font-size: 14px;"></p>
+      <label for="file-upload" class="custom-file-upload">
+        파일 업로드
+      </label>
+      <input id="file-upload" name="file" type="file" accept=".txt" onchange="displayFileName(event)">
+      <br>
+      <button type="submit" class="start-button">시작하기</button>
+    </form>
+  </div>
+  <script>
+    // 파일명을 표시하는 함수
+function displayFileName(event) {
+  const fileInput = event.target;
+  const fileNameElement = document.getElementById("file-name");
+
+  if (fileInput.files.length > 0) {
+    fileNameElement.textContent = `선택된 파일: ${fileInput.files[0].name}`;
+  } else {
+    fileNameElement.textContent = "";
+  }
+}
+
+// 폼 유효성 검사 함수
+function validateForm() {
+  const fileInput = document.getElementById("file-upload");
+  if (!fileInput.value) {
+    alert("파일을 업로드해주세요.");
+    return false; // 폼 전송 중단
+  }
+  return true; // 폼 전송 허용
+}
+  </script>
+</body>
+</html>

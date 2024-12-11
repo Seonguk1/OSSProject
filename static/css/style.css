@@ -1,0 +1,195 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5d8f0, #d5e1ff); /* 보라색 그라데이션 배경 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 최소 높이 설정 */
+}
+
+/* 중앙 흰색 틀 */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    overflow: hidden; /* 내부 내용 잘림 방지 */
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 36px;
+    color: #6a5acd; /* 보라색 */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+h3{
+    color: #6a5acd;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    color: white;
+    background: #6a5acd; /* 보라색 버튼 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.start-button{
+    background-color: #ff6f61;
+}
+
+button:hover {
+    background: #5847aa;
+}
+
+/* 숨겨진 파일 업로드 입력 필드 */
+#file-upload {
+    display: none;
+}
+
+/* 커스텀 파일 업로드 버튼 */
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: white;
+    background: #6a5acd; /* 빨간색 버튼 */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload:hover {
+    background: #5847aa;
+}
+
+/* 차트 스타일 */
+.chart-container {
+    margin: 0 auto; /* 상하 여백 제거 및 가운데 정렬 */
+    padding: 20px 0; /* 위아래 패딩 추가 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 그래프와 제목 간격 */
+    align-items: center;
+    text-align: center;
+}
+
+/* 개별 차트 수정 */
+.chart {
+    max-width: 600px;
+    height: 400px;
+    margin: 0; /* 상하 여백 제거 */
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    margin: 40px 0;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #7364d5; /* 보라색 */
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+th, td {
+    padding: 15px 0px;
+    text-align: center;
+}
+
+tbody tr {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+tbody tr:hover {
+    background-color: #f0f3ff;
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+}
+
+td {
+    font-size: 14px;
+    color: #555;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 점수 애니메이션 */
+.score {
+    font-size: 72px;
+    font-weight: bold;
+    color: #6a5acd;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    button, .custom-file-upload {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .chart {
+        height: 300px;
+    }
+}
